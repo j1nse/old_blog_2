@@ -8,6 +8,16 @@
   </url>
   
   <url>
+    <loc>http://blog.jinse666.cn/blog/%E4%BA%B2%E6%B5%8B%E5%8D%A1bug%E7%8B%82%E8%B5%9A%E4%BB%B7%E5%80%BC8%E5%85%83%E7%9A%84%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%BC%9A%E5%91%98/</loc>
+    <lastmod>2017-04-10T20:19:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</loc>
+    <lastmod>2017-03-14T21:22:42+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.jinse666.cn/contact/</loc>
     <lastmod>2017-03-09T13:23:28+08:00</lastmod>
   </url>
@@ -15,6 +25,31 @@
   <url>
     <loc>http://blog.jinse666.cn/about/</loc>
     <lastmod>2017-03-09T13:19:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/blog/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2017-02-27T20:12:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/blog/%E6%8E%A8%E8%8D%90dns%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2017-02-17T16:16:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/blog/python%E8%A3%85scrapy%E7%9A%84%E6%9B%B2%E6%8A%98%E8%B7%AF%E9%80%94/</loc>
+    <lastmod>2017-02-10T23:33:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</loc>
+    <lastmod>2017-02-10T10:17:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</loc>
+    <lastmod>2017-02-09T13:45:49+00:00</lastmod>
   </url>
   
   <url>
@@ -29,6 +64,12 @@
   </url>
   
   <url>
+    <loc>http://blog.jinse666.cn/tags/deepnet/</loc>
+    <lastmod>2017-02-09T13:45:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.jinse666.cn/</loc>
     <lastmod>2017-08-31T11:55:32+08:00</lastmod>
     <priority>0</priority>
@@ -36,6 +77,43 @@
   
   <url>
     <loc>http://blog.jinse666.cn/tags/</loc>
+    <lastmod>2017-02-09T13:45:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/tags/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90/</loc>
+    <lastmod>2017-03-14T21:22:42+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/tags/%CF%83%E3%81%A3%D0%B4%E3%81%A3/</loc>
+    <lastmod>2017-04-10T20:19:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/categories/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6/</loc>
+    <lastmod>2017-02-27T20:12:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/tags/%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE/</loc>
+    <lastmod>2017-02-27T20:12:28+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/categories/%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2017-04-10T20:19:49+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.jinse666.cn/categories/%E8%83%A1%E4%B9%B1%E5%86%99/</loc>
+    <lastmod>2017-02-09T13:45:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   

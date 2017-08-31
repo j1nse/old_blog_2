@@ -21,6 +21,25 @@
     </item>
     
     <item>
+      <title>亲测卡bug，狂赚价值8元的网易云音乐会员</title>
+      <link>http://blog.jinse666.cn/blog/%E4%BA%B2%E6%B5%8B%E5%8D%A1bug%E7%8B%82%E8%B5%9A%E4%BB%B7%E5%80%BC8%E5%85%83%E7%9A%84%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%BC%9A%E5%91%98/</link>
+      <pubDate>Mon, 10 Apr 2017 20:19:49 +0000</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/%E4%BA%B2%E6%B5%8B%E5%8D%A1bug%E7%8B%82%E8%B5%9A%E4%BB%B7%E5%80%BC8%E5%85%83%E7%9A%84%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%BC%9A%E5%91%98/</guid>
+      <description>亲测卡bug，狂赚价值8元的网易云音乐会员 今年1月在itouch上买了一个月的网易云音乐会员，但是由于学校辣鸡网卡了，我直接退出，然后钱扣了会员没到，于是找客服给我当时续了1个月。然后就再没怎么用过itouch，今天用touch上后突然给自动我充了一个月会员，曰：美滋滋</description>
+    </item>
+    
+    <item>
+      <title>win下pip改源，速度起飞</title>
+      <link>http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</link>
+      <pubDate>Tue, 14 Mar 2017 21:22:42 +0000</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</guid>
+      <description>新建到%USERPROFILE%\pip\pip.ini
+[global] index-url = https://pypi.douban.com/simple [install] trusted-host=pypi.doubanio.com  pip速度立马飞起</description>
+    </item>
+    
+    <item>
       <title>contact</title>
       <link>http://blog.jinse666.cn/contact/</link>
       <pubDate>Thu, 09 Mar 2017 13:23:28 +0800</pubDate>
@@ -37,6 +56,91 @@
       <guid>http://blog.jinse666.cn/about/</guid>
       <description>太菜了，没啥好介绍的，喜欢音乐、电影、信息安全、游戏的可以交个朋友
 广告位招租</description>
+    </item>
+    
+    <item>
+      <title>掀垫子搞基大学物理实验选课指南</title>
+      <link>http://blog.jinse666.cn/blog/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Mon, 27 Feb 2017 20:12:28 +0000</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97/</guid>
+      <description>先引用一段大佬的话，侵删 &amp;gt;选物理实验一些必须要知道的东西。。。。
+ 必须先选绪论！一进去先选绪论！！！（不想翘课的话）
+一、物理实验三大天王：
+乔俊绒（江湖人称乔奶奶）：
+1、电表改装与校准实验（据说很严，有男生被骂哭，还有现场撕实验报告的“盛况”）级别：能不选就别选。
+2、示波管的结构-电子束实验（实验报告很多，但乔奶奶貌似管得不严，可以选）
+乔奶奶每次实验貌似都不讲怎么做，需要大家自己看。乔奶奶脾气不好。。。给分还可以。
+武光玲：
+关于分光计的两个实验（三棱镜顶角和光栅特性的研究）
+分光计这个东西很恶心，特别是上一个实验的人是猪队友的时候，，，我当时调了一个小时，眼会瞎。。
+武光玲貌似也不教怎么做，脾气也不好。。。
+孙继超：
+1、空气中测声速（很简单）（学长亲测hin简单）
+2、水中测声速（因人而异，有的人要做到实验结束。。。）
+孙继超给分比较低，比较能说。。。
+乔奶奶和孙继超可以看出实验数据是不是抄的，，选到就好好做吧。。。
+二、简单点的实验
+1、霍尔元件。。表面上得倒腾，但如果想偷懒很轻松。
+2、复摆测重力加速度。。。老师都会说很简单。。事实上就是很简单。
+3、电动音叉。。很快很简单。。
+4、光的偏振/薄透镜测焦距。。。别看是光学实验。真的很简单。
+5、冲击法测高阻和电容。。。但要测点一个一个测，可能会比较慢。
+6、用冲击检流计测量螺线管磁场分布（6是一位学长说的。。）
+8、感应法测磁场-交变磁场的分布与测量。貌似比霍尔元件还快。。我做的时候是这样。
+音频信号光纤传播实验。。。要用示波器。。用得还可以是可以选的。
+组装式直流双臂电桥测量低电阻。。老师会说比较难，但他会先连一次，拍照片然后照着连吧。
+电流场模拟静电场也是一个点一个点测。。不难。。
+线性、非线性电阻及二极管伏安特性的测定。。。老师说很简单。。。在一个有孔的板子上连电路。。电&amp;gt;学学得好的可以选。。
+拉伸法测杨氏弹性模量实验，双人合作，不难，但队友还挺重要的。
+三线摆测刚体的转动惯量，实验不难，但数据处理挺烦的。。
+三、光学实验
+光学实验最大的特点：实验报告超多。。。眼睛会瞎。。
+但事实是学校的网很可能让你选的时候只剩光学。。
+1、光的偏振\薄透镜焦距的测量（一般只会有两个实验中的一个）很简单，而且眼睛不会瞎。 &amp;gt;然后是大佬口授经验： &amp;gt;测量体积和水中测声速是大坑，不要被名字迷惑 &amp;gt;实验报告发下来后不要扔了，可以宿舍互换或者以后用
+ </description>
+    </item>
+    
+    <item>
+      <title>推荐DNS设置</title>
+      <link>http://blog.jinse666.cn/blog/%E6%8E%A8%E8%8D%90dns%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Fri, 17 Feb 2017 16:16:05 +0000</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/%E6%8E%A8%E8%8D%90dns%E8%AE%BE%E7%BD%AE/</guid>
+      <description>有个大佬推荐用的DNS设置，个人感觉十分好用，为了保护隐私就不说大佬名字了 这里贴出DNS的设置：
+ 1.2.4.8 223.5.5.5 8.8.8.8  </description>
+    </item>
+    
+    <item>
+      <title>Python装Scrapy的曲折路途</title>
+      <link>http://blog.jinse666.cn/blog/python%E8%A3%85scrapy%E7%9A%84%E6%9B%B2%E6%8A%98%E8%B7%AF%E9%80%94/</link>
+      <pubDate>Fri, 10 Feb 2017 23:33:41 +0000</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/python%E8%A3%85scrapy%E7%9A%84%E6%9B%B2%E6%8A%98%E8%B7%AF%E9%80%94/</guid>
+      <description>Scrapy这个模块比较神奇，感觉像装全家桶一样而且可能会遇到许多问题，我这里说一下解决方法。
+ lxml安装有问题。   (一) 首先安装wheel命令行执行 pip install wheel (二) 下载相应版本的lxml后缀为.whl的文件 https://link.zhihu.com/?target=http%3A//www.lfd.uci.edu/%7Egohlke/pythonlibs/%23lxml (三)安装lxml进入lxml下载的根目录，按住shift然后鼠标右键选择在此处打开命令行窗口 pip install lxml_文件名.whl (四)检验安装成功与否任意处打开命令行窗口 python 回车 import lxml 如果没有报错就安装成功了！如果没成功请。。。。。。
+作者：杨航锋 链接：https://www.zhihu.com/question/49470061/answer/116163941 来源：知乎 &amp;gt;著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+ 这点话是我自己的：cp33 意思是 CPython3.3 根据自己的Python版本选择
+2.可能需要一个神奇的环境: https://www.microsoft.com/en-us/download/details.aspx?id=44266 Microsoft Visual C++ Compiler for Python 2.7
+PS:部分网页可能需要翻那啥，自行解决啦</description>
+    </item>
+    
+    <item>
+      <title>如何戴耳机还使用电脑自带话筒</title>
+      <link>http://blog.jinse666.cn/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</link>
+      <pubDate>Fri, 10 Feb 2017 10:17:29 +0000</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</guid>
+      <description>买的索尼耳机()是不带话筒的，但是现在的电脑大多数是耳机插口和话筒插口合一，所以插着耳机还想用自带话筒怎么办？ 直接上图吧. 在任务栏找到这个东西，找不到就是驱动没安装对或者地球要毁灭了。 点开后: 然后你就知道怎么办啦 </description>
+    </item>
+    
+    <item>
+      <title>昨天进入暗网成功！</title>
+      <link>http://blog.jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</link>
+      <pubDate>Thu, 09 Feb 2017 13:45:49 +0000</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</guid>
+      <description>没啥可说的，网上都是教程，唯一要提的一点是，亚马逊网桥，ss设置个前置代理，要不然特别卡。</description>
     </item>
     
   </channel>

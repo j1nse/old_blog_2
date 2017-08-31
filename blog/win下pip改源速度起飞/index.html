@@ -14,10 +14,10 @@
 <title>
 
 
-     404 Page not found 
+     win下pip改源，速度起飞 
 
 </title>
-<link rel="canonical" href="">
+<link rel="canonical" href="http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/">
 
 
 
@@ -57,8 +57,6 @@
 
 
 
-  <link href="http://blog.jinse666.cn/index.xml" rel="alternate" type="application/rss+xml" title="Jinse" />
-
 
 
 </head>
@@ -68,8 +66,8 @@
 
 <div class="section" id="top">
 
-    <div class="container hero is-medium has-text-centered  fade-in one ">
-    <h1 class="bold-title is-1">404</h1>
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Jinse's Blog</h1>
     </div>
 
 
@@ -107,11 +105,40 @@
 <hr>
     </div>
 
-    <div class="container  fade-in two  top-pad">
-        Oops! Either you've found a bug (in which case, <a href="mailto:admin@jinse666.cn">please tell me</a>) or you're just making things up. This page doesn't exist!
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/">win下pip改源，速度起飞</a></h2>
+            <div class="post-data">
+                Mar 14, 2017 |
+                1 minute read
+            </div>
+
+            
+
     </div>
 
-<div class="top-pad"><hr></div>
+    <div class="container markdown  fade-in two  top-pad">
+        <p>新建到<code>%USERPROFILE%\pip\pip.ini</code></p>
+
+<pre><code>[global] 
+index-url = https://pypi.douban.com/simple 
+[install] 
+trusted-host=pypi.doubanio.com 
+</code></pre>
+
+<p>pip速度立马飞起</p>
+
+    </div>
+
+    <div class="disqus">
+        
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
 <div class="section" id="footer">
     <div class="container has-text-centered">
         
@@ -120,3 +147,18 @@
     </div>
 </div>
 </div>
+</div>
+
+
+<script>
+$('a[href^="http:\/\/blog.jinse666.cn\/blog\/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
+
+</body>
