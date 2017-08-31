@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jinse</title>
+    <link>http://blog.jinse666.cn/</link>
+    <description>Recent content on Jinse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 31 Aug 2017 11:55:32 +0800</lastBuildDate>
+    
+	<atom:link href="http://blog.jinse666.cn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>本博客采用高大上Hugo搭建</title>
+      <link>http://blog.jinse666.cn/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%87%87%E7%94%A8%E9%AB%98%E5%A4%A7%E4%B8%8Ahugo%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Thu, 31 Aug 2017 11:55:32 +0800</pubDate>
+      
+      <guid>http://blog.jinse666.cn/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%87%87%E7%94%A8%E9%AB%98%E5%A4%A7%E4%B8%8Ahugo%E6%90%AD%E5%BB%BA/</guid>
+      <description>挺好用的，欢迎来用啊~</description>
+    </item>
+    
+    <item>
+      <title>contact</title>
+      <link>http://blog.jinse666.cn/contact/</link>
+      <pubDate>Thu, 09 Mar 2017 13:23:28 +0800</pubDate>
+      
+      <guid>http://blog.jinse666.cn/contact/</guid>
+      <description>广告位招租</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>http://blog.jinse666.cn/about/</link>
+      <pubDate>Thu, 09 Mar 2017 13:19:25 +0800</pubDate>
+      
+      <guid>http://blog.jinse666.cn/about/</guid>
+      <description>太菜了，没啥好介绍的，喜欢音乐、电影、信息安全、游戏的可以交个朋友
+广告位招租</description>
+    </item>
+    
+  </channel>
+</rss>
