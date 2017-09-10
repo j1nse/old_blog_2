@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Win下pip改源 on Jinse</title>
-    <link>http://blog.jinse666.cn/tags/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90/</link>
+    <link>http://jinse666.cn/tags/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90/</link>
     <description>Recent content in Win下pip改源 on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 14 Mar 2017 21:22:42 +0000</lastBuildDate>
     
-	<atom:link href="http://blog.jinse666.cn/tags/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jinse666.cn/tags/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>win下pip改源，速度起飞</title>
-      <link>http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</link>
+      <link>http://jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</link>
       <pubDate>Tue, 14 Mar 2017 21:22:42 +0000</pubDate>
       
-      <guid>http://blog.jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</guid>
+      <guid>http://jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</guid>
       <description>新建到%USERPROFILE%\pip\pip.ini
 [global] index-url = https://pypi.douban.com/simple [install] trusted-host=pypi.doubanio.com  pip速度立马飞起</description>
     </item>

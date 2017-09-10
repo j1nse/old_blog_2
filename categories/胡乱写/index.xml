@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>胡乱写 on Jinse</title>
-    <link>http://blog.jinse666.cn/categories/%E8%83%A1%E4%B9%B1%E5%86%99/</link>
+    <link>http://jinse666.cn/categories/%E8%83%A1%E4%B9%B1%E5%86%99/</link>
     <description>Recent content in 胡乱写 on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 09 Feb 2017 13:45:49 +0000</lastBuildDate>
     
-	<atom:link href="http://blog.jinse666.cn/categories/%E8%83%A1%E4%B9%B1%E5%86%99/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jinse666.cn/categories/%E8%83%A1%E4%B9%B1%E5%86%99/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>昨天进入暗网成功！</title>
-      <link>http://blog.jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</link>
+      <link>http://jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</link>
       <pubDate>Thu, 09 Feb 2017 13:45:49 +0000</pubDate>
       
-      <guid>http://blog.jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</guid>
+      <guid>http://jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</guid>
       <description>没啥可说的，网上都是教程，唯一要提的一点是，亚马逊网桥，ss设置个前置代理，要不然特别卡。</description>
     </item>
     
