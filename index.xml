@@ -6,37 +6,10 @@
     <description>Recent content on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 31 Aug 2017 11:55:32 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Mar 2017 21:22:42 +0000</lastBuildDate>
     
 	<atom:link href="http://jinse666.cn/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>本博客采用高大上Hugo搭建</title>
-      <link>http://jinse666.cn/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%87%87%E7%94%A8%E9%AB%98%E5%A4%A7%E4%B8%8Ahugo%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Thu, 31 Aug 2017 11:55:32 +0800</pubDate>
-      
-      <guid>http://jinse666.cn/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%87%87%E7%94%A8%E9%AB%98%E5%A4%A7%E4%B8%8Ahugo%E6%90%AD%E5%BB%BA/</guid>
-      <description>挺好用的，欢迎来用啊~</description>
-    </item>
-    
-    <item>
-      <title>本博客采用高大上Hugo搭建</title>
-      <link>http://jinse666.cn/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%87%87%E7%94%A8%E9%AB%98%E5%A4%A7%E4%B8%8Ahugo%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Thu, 31 Aug 2017 11:55:32 +0800</pubDate>
-      
-      <guid>http://jinse666.cn/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E9%87%87%E7%94%A8%E9%AB%98%E5%A4%A7%E4%B8%8Ahugo%E6%90%AD%E5%BB%BA/</guid>
-      <description>挺好用的，欢迎来用啊~</description>
-    </item>
-    
-    <item>
-      <title>亲测卡bug，狂赚价值8元的网易云音乐会员</title>
-      <link>http://jinse666.cn/blog/%E4%BA%B2%E6%B5%8B%E5%8D%A1bug%E7%8B%82%E8%B5%9A%E4%BB%B7%E5%80%BC8%E5%85%83%E7%9A%84%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%BC%9A%E5%91%98/</link>
-      <pubDate>Mon, 10 Apr 2017 20:19:49 +0000</pubDate>
-      
-      <guid>http://jinse666.cn/blog/%E4%BA%B2%E6%B5%8B%E5%8D%A1bug%E7%8B%82%E8%B5%9A%E4%BB%B7%E5%80%BC8%E5%85%83%E7%9A%84%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%BC%9A%E5%91%98/</guid>
-      <description>亲测卡bug，狂赚价值8元的网易云音乐会员 今年1月在itouch上买了一个月的网易云音乐会员，但是由于学校辣鸡网卡了，我直接退出，然后钱扣了会员没到，于是找客服给我当时续了1个月。然后就再没怎么用过itouch，今天用touch上后突然给自动我充了一个月会员，曰：美滋滋</description>
-    </item>
     
     <item>
       <title>win下pip改源，速度起飞</title>
@@ -144,28 +117,18 @@ PS:部分网页可能需要翻那啥，自行解决啦</description>
     </item>
     
     <item>
-      <title>昨天进入暗网成功！</title>
-      <link>http://jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</link>
-      <pubDate>Thu, 09 Feb 2017 13:45:49 +0000</pubDate>
-      
-      <guid>http://jinse666.cn/blog/%E6%98%A8%E5%A4%A9%E8%BF%9B%E5%85%A5%E6%9A%97%E7%BD%91%E6%88%90%E5%8A%9F/</guid>
-      <description>没啥可说的，网上都是教程，唯一要提的一点是，亚马逊网桥，ss设置个前置代理，要不然特别卡。</description>
-    </item>
-    
-    <item>
       <title>Telegram介绍和使用以及在网上隐藏自己手机号</title>
       <link>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</guid>
       <description> [TOC]
-1. Telegram介绍和使用  Tg是毛子开发的即时通讯软件，使用需搭梯子翻qiang，加密良好，功能强大，界面美观。 没有各种敏感，各种屏蔽，畅所欲言。
+Telegram介绍和使用以及在网上隐藏自己手机号 1. Telegram介绍和使用  Tg是毛子开发的即时通讯软件，使用需搭梯子翻qiang，加密良好，功能强大，界面美观。 没有各种敏感，各种屏蔽，畅所欲言。
 1.下载 Tg官网只提供谷歌play的连接，没有play的同志可以去apkpure搜索，如果你的手机是android 6以下的，可以去apkmirror下载最新版。 个人推荐下载软件顺序，xx应用市场最不纯净。 &amp;gt; 1. Google Play &amp;gt; 2. 官网 &amp;gt; 3. xx应用市场
 2. 安装 Tg注册需要手机号，但是为了防止查水表和各种原因，最好别用自己的手机号，具体操作看搞手机号 使用的话记得翻qiang就行。 如果英文看不习惯 去Tg中文频道下载对应的文件，操作一下即可。
-  2. 免费手机号美滋滋 1.国内手机号 用别的国内的手机号注册账号，需要付出每条验证码1毛钱的痛苦代价(某宝2块)。 去神秘网站 注册个账号，然后充1元就能注册10个了(其他网站也能用)
-2.国外手机号 Textnow提供虚拟手机号，美国的，用来注册Tg美滋滋，不要钱。 具体去Textnow注册个账号，填一下区号(加州是213)，然后就能用了。 这是我的美国手机号↓ 注意：这些手机号不保证注册完以后还能用，酌情使用
-3. Tg机器人推荐  某导航，里面有各种群组的连接 @temp_mail_bot 直接搜这个名字，可以获得免费的临时邮箱，用途和手机号一样 @QRCODEBOT 直接搜名字就找见，可以识别2唯码，非常方便
- </description>
+  2. 免费手机号美滋滋 1.国内手机号  用别的国内的手机号注册账号，需要付出每条验证码1毛钱的痛苦代价(某宝2块)。 去神秘网站 注册个账号，然后充1元就能注册10个了(其他网站也能用)
+2.国外手机号 Textnow提供虚拟手机号，美国的，用来注册Tg美滋滋，不要钱。 具体去Textnow注册个账号，填一下区号(加州是213)，然后就能用了。 这是我的美国手机号↓   注意：这些手机号不保证注册完以后还能用，酌情使用
+3. Tg机器人推荐  某导航，里面有各种群组的连接 @temp_mail_bot 直接搜这个名字，可以获得免费的临时邮箱，用途和手机号一样 @QRCODEBOT 直接搜名字就找见，可以识别两维码，非常方便  </description>
     </item>
     
   </channel>
