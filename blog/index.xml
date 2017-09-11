@@ -98,6 +98,19 @@ PS:部分网页可能需要翻那啥，自行解决啦</description>
     </item>
     
     <item>
+      <title></title>
+      <link>http://jinse666.cn/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://jinse666.cn/blog/</guid>
+      <description>title: 变量没有初始化造成xss date: 2017-9-11 21:39:09
+初学php审计，先照猫画虎，拿最简单的练练手，要走的路还很长，向周神、鱼神学习。。 轻喷。。。
+&amp;lt;?php /** * ZCNCMS * 用户登陆 * php&amp;gt;=5.0 * @author LEI * @version 1.1.2 * @time 20111004 */ //初始化 $pagetitle = &#39;系统登陆&#39;; $loginerror = &#39;&#39;; //功能部分 if(isset($submit)){ //中间省略n行代码 } else { //echo 1; $loginerror = &#39;用户名密码错误，请重新登陆.&#39;; $templatefile = &#39;login.tpl.php&#39;; } } else { $templatefile = &#39;login.tpl.php&#39;; } ?&amp;gt;  可以看出初始化了2个变量，然后包含了login.tpl.php。
+找到login.tpl.php 部分代码如下
+?php $pagetitle=&amp;quot;管理登陆&amp;quot;; ?&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.</description>
+    </item>
+    
+    <item>
       <title>Telegram介绍和使用以及在网上隐藏自己手机号</title>
       <link>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
