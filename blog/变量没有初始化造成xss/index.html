@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="happy的地方">
+
+<base href="http://jinse666.cn/">
+<title>
+
+
+     变量没有初始化造成xss 
+
+</title>
+<link rel="canonical" href="http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500|Work+Sans">
+
+
+
+    
+    <link rel="stylesheet" href="http://jinse666.cn/css/dark-style.css?t=1505140289">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="http://jinse666.cn/img/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+<body lang="zh">
+  
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Jinse's Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="http://jinse666.cn/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="http://jinse666.cn/#about">About</a> 
+      </span>
+    
+    
+      <span class="nav-item">
+        <a href="http://jinse666.cn/blog">Back to blog</a>
+      </span> 
+    
+      <span class="nav-item">
+        <a href="http://jinse666.cn/#contact">Contact</a>
+      </span>
+    
+      
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/">变量没有初始化造成xss</a></h2>
+            <div class="post-data">
+                Sep 11, 2017 |
+                1 minute read
+            </div>
+
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>初学php审计，先照猫画虎，拿最简单的练练手，要走的路还很长，向周神、鱼神学习。。
+轻喷。。。</p>
+
+<pre><code>&lt;?php
+
+//初始化
+$pagetitle = '系统登陆';
+$loginerror = '';
+//功能部分
+if(isset($submit)){
+
+		//中间省略n行代码
+	} else {
+		//echo 1;
+		$loginerror = '用户名密码错误，请重新登陆.';
+		$templatefile = 'login.tpl.php';
+	}
+} else {
+	$templatefile = 'login.tpl.php';
+}
+?&gt;
+</code></pre>
+
+<p>可以看出初始化了2个变量，然后包含了<code>login.tpl.php</code>。</p>
+
+<p>找到<code>login.tpl.php</code> 部分代码如下</p>
+
+<pre><code>?php 
+$pagetitle=&quot;管理登陆&quot;;
+?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&lt;title&gt;
+&lt;?php if(!empty($topTitle)) echo $topTitle.'-';?&gt;
+&lt;?php echo $sys['indextitle']; ?&gt;-&lt;?php echo $pagetitle;?&gt;&lt;/title&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&lt;?php echo $sys['webkeywords']; ?&gt;&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&lt;?php echo $sys['webdescription']; ?&gt;&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/reset.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/invalid.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;	
+&lt;/head&gt;
+
+</code></pre>
+
+<p>可以看到标题里输出了3个变量，但是<code>$topTitle</code>并忘了初始化，它只检测了值非空，所以我们可以直接赋值执行脚本:
+<img src="https://i.loli.net/2017/09/11/59b69882a5b8b.png" alt="" /></p>
+
+<p>而其它页面倒是初始化了
+<img src="https://i.loli.net/2017/09/11/59b698f8ee057.png" alt="" />
+所以这就是一个程序员马虎大意的事.</p>
+
+<p>只要加一行代码就避免了</p>
+
+<pre><code>&lt;?php 
+$pagetitle=&quot;管理登陆&quot;;
+$topTitle = ''
+?&gt;
+</code></pre>
+
+    </div>
+
+    <div class="disqus">
+        
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+            Ай-ай-ай-ай-ай,что сейчас произошло!
+        
+    </div>
+</div>
+</div>
+</div>
+
+
+<script>
+$('a[href^="http:\/\/jinse666.cn\/blog\/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
+
+</body>

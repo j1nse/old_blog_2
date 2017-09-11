@@ -6,10 +6,37 @@
     <description>Recent content on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 14 Mar 2017 21:22:42 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Sep 2017 21:39:09 +0000</lastBuildDate>
     
 	<atom:link href="http://jinse666.cn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>变量没有初始化造成xss</title>
+      <link>http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/</link>
+      <pubDate>Mon, 11 Sep 2017 21:39:09 +0000</pubDate>
+      
+      <guid>http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/</guid>
+      <description>初学php审计，先照猫画虎，拿最简单的练练手，要走的路还很长，向周神、鱼神学习。。 轻喷。。。
+&amp;lt;?php //初始化 $pagetitle = &#39;系统登陆&#39;; $loginerror = &#39;&#39;; //功能部分 if(isset($submit)){ //中间省略n行代码 } else { //echo 1; $loginerror = &#39;用户名密码错误，请重新登陆.&#39;; $templatefile = &#39;login.tpl.php&#39;; } } else { $templatefile = &#39;login.tpl.php&#39;; } ?&amp;gt;  可以看出初始化了2个变量，然后包含了login.tpl.php。
+找到login.tpl.php 部分代码如下
+?php $pagetitle=&amp;quot;管理登陆&amp;quot;; ?&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=utf-8&amp;quot; /&amp;gt; &amp;lt;title&amp;gt; &amp;lt;?php if(!empty($topTitle)) echo $topTitle.&#39;-&#39;;?&amp;gt; &amp;lt;?php echo $sys[&#39;indextitle&#39;]; ?&amp;gt;-&amp;lt;?php echo $pagetitle;?&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;lt;?php echo $sys[&#39;webkeywords&#39;]; ?</description>
+    </item>
+    
+    <item>
+      <title>Telegram介绍和使用以及在网上隐藏自己手机号</title>
+      <link>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</link>
+      <pubDate>Sun, 10 Sep 2017 21:34:27 +0000</pubDate>
+      
+      <guid>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</guid>
+      <description> [TOC]
+Telegram介绍和使用以及在网上隐藏自己手机号 1. Telegram介绍和使用  Tg是毛子开发的即时通讯软件，使用需搭梯子翻qiang，加密良好，功能强大，界面美观。 没有各种敏感，各种屏蔽，畅所欲言。
+1.下载 Tg官网只提供谷歌play的连接，没有play的同志可以去apkpure搜索，如果你的手机是android 6以下的，可以去apkmirror下载最新版。 个人推荐下载软件顺序，xx应用市场最不纯净。 &amp;gt; 1. Google Play &amp;gt; 2. 官网 &amp;gt; 3. xx应用市场
+2. 安装 Tg注册需要手机号，但是为了防止查水表和各种原因，最好别用自己的手机号，具体操作看搞手机号 使用的话记得翻qiang就行。 如果英文看不习惯 去Tg中文频道下载对应的文件，操作一下即可。
+  2. 免费手机号美滋滋 1.国内手机号  用别的国内的手机号注册账号，需要付出每条验证码1毛钱的痛苦代价(某宝2块)。 去神秘网站 注册个账号，然后充1元就能注册10个了(其他网站也能用)
+2.国外手机号 Textnow提供虚拟手机号，美国的，用来注册Tg美滋滋，不要钱。 具体去Textnow注册个账号，填一下区号(加州是213)，然后就能用了。 这是我的美国手机号↓   注意：这些手机号不保证注册完以后还能用，酌情使用
+3. Tg机器人推荐  某导航，里面有各种群组的连接 @temp_mail_bot 直接搜这个名字，可以获得免费的临时邮箱，用途和手机号一样 @QRCODEBOT 直接搜名字就找见，可以识别两维码，非常方便  </description>
+    </item>
     
     <item>
       <title>win下pip改源，速度起飞</title>
@@ -114,34 +141,6 @@ PS:部分网页可能需要翻那啥，自行解决啦</description>
       
       <guid>http://jinse666.cn/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</guid>
       <description>买的索尼耳机()是不带话筒的，但是现在的电脑大多数是耳机插口和话筒插口合一，所以插着耳机还想用自带话筒怎么办？ 直接上图吧. 在任务栏找到这个东西，找不到就是驱动没安装对或者地球要毁灭了。 点开后: 然后你就知道怎么办啦 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://jinse666.cn/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://jinse666.cn/blog/</guid>
-      <description>title: 变量没有初始化造成xss date: 2017-9-11 21:39:09
-初学php审计，先照猫画虎，拿最简单的练练手，要走的路还很长，向周神、鱼神学习。。 轻喷。。。
-&amp;lt;?php /** * ZCNCMS * 用户登陆 * php&amp;gt;=5.0 * @author LEI * @version 1.1.2 * @time 20111004 */ //初始化 $pagetitle = &#39;系统登陆&#39;; $loginerror = &#39;&#39;; //功能部分 if(isset($submit)){ //中间省略n行代码 } else { //echo 1; $loginerror = &#39;用户名密码错误，请重新登陆.&#39;; $templatefile = &#39;login.tpl.php&#39;; } } else { $templatefile = &#39;login.tpl.php&#39;; } ?&amp;gt;  可以看出初始化了2个变量，然后包含了login.tpl.php。
-找到login.tpl.php 部分代码如下
-?php $pagetitle=&amp;quot;管理登陆&amp;quot;; ?&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD XHTML 1.0 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&amp;quot;&amp;gt; &amp;lt;html xmlns=&amp;quot;http://www.</description>
-    </item>
-    
-    <item>
-      <title>Telegram介绍和使用以及在网上隐藏自己手机号</title>
-      <link>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</guid>
-      <description> [TOC]
-Telegram介绍和使用以及在网上隐藏自己手机号 1. Telegram介绍和使用  Tg是毛子开发的即时通讯软件，使用需搭梯子翻qiang，加密良好，功能强大，界面美观。 没有各种敏感，各种屏蔽，畅所欲言。
-1.下载 Tg官网只提供谷歌play的连接，没有play的同志可以去apkpure搜索，如果你的手机是android 6以下的，可以去apkmirror下载最新版。 个人推荐下载软件顺序，xx应用市场最不纯净。 &amp;gt; 1. Google Play &amp;gt; 2. 官网 &amp;gt; 3. xx应用市场
-2. 安装 Tg注册需要手机号，但是为了防止查水表和各种原因，最好别用自己的手机号，具体操作看搞手机号 使用的话记得翻qiang就行。 如果英文看不习惯 去Tg中文频道下载对应的文件，操作一下即可。
-  2. 免费手机号美滋滋 1.国内手机号  用别的国内的手机号注册账号，需要付出每条验证码1毛钱的痛苦代价(某宝2块)。 去神秘网站 注册个账号，然后充1元就能注册10个了(其他网站也能用)
-2.国外手机号 Textnow提供虚拟手机号，美国的，用来注册Tg美滋滋，不要钱。 具体去Textnow注册个账号，填一下区号(加州是213)，然后就能用了。 这是我的美国手机号↓   注意：这些手机号不保证注册完以后还能用，酌情使用
-3. Tg机器人推荐  某导航，里面有各种群组的连接 @temp_mail_bot 直接搜这个名字，可以获得免费的临时邮箱，用途和手机号一样 @QRCODEBOT 直接搜名字就找见，可以识别两维码，非常方便  </description>
     </item>
     
   </channel>
