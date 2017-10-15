@@ -14,10 +14,10 @@
 <title>
 
 
-     变量没有初始化造成xss 
+     HTML实体与相关函数了解 
 
 </title>
-<link rel="canonical" href="http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/">
+<link rel="canonical" href="http://jinse666.cn/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/">
 
 
 
@@ -106,9 +106,9 @@
     </div>
 
     <div class="container  fade-in two ">
-        <h2 class="title is-1 top-pad strong-post-title"><a href="http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/">变量没有初始化造成xss</a></h2>
+        <h2 class="title is-1 top-pad strong-post-title"><a href="http://jinse666.cn/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/">HTML实体与相关函数了解</a></h2>
             <div class="post-data">
-                Sep 11, 2017 |
+                Jan 1, 0001 |
                 1 minute read
             </div>
 
@@ -117,65 +117,62 @@
     </div>
 
     <div class="container markdown  fade-in two  top-pad">
-        <p>初学php审计，先照猫画虎，拿最简单的练练手，要走的路还很长，向周神、鱼神学习。。
-轻喷。。。</p>
+        <p>#HTML实体是啥？</p>
+
+<p>在 HTML 中，某些字符是预留的。
+在 HTML 中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签。使用是非常不安全的。
+如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体
+比如：
+<code>&lt;p&gt; &amp;#60;script&amp;#62;alert(8848) &amp;#60;/script&amp;#62; &lt;/p&gt;</code></p>
+
+<p>显示出来的结果是这样：</p>
+
+<p><code>&lt;script&gt;alert(8848) &lt;/script&gt;</code></p>
+
+<hr />
+
+<p>如果我们xss的时候，输出被转换成HTML实体，那也就GG了。
+在转换HTML实体的时候，php里会用 htmlspecialchars() 这个函数</p>
+
+<p>我们把代码改成
+<code>$a = htmlspecialchars($a);</code>
+<code>echo $a;</code>
+类似这样的就行了</p>
+
+<hr />
+
+<p>上面的做法虽然简单方便，但是忽略了 htmlspecialchars() 的一个重要参数</p>
+
+<p>如果单纯的用 htmlspecialchars()的话，它是不会转换单引号 &lsquo; 的，这就造成可能的漏洞:
+如果我们的代码是</p>
+
+<pre><code>	$a = htmlspecialchars($a);
+	&lt;input type='text' value='&lt;?php echo $a?&gt;'&gt;
+</code></pre>
+
+<p>$a 是    <code>' autofocus onfocus='alert(8848)</code>
+这样就用<code>'</code>实现xss了</p>
+
+<p>3种方式：
+<code>htmlspecialchars($a,ENT_COMPAT);</code>
+只转换双引号
+<code>htmlspecialchars($a, ENT_QUOTES);</code>
+转换双引号和单引号
+<code>htmlspecialchars($a, ENT_NOQUOTES);</code>
+不转换任何引号</p>
+
+<p>一般情况下用了 htmlspecialchars($a, ENT_QUOTES);  就没啥办法了，如果有师父知道其他方法的话欢迎指正！</p>
+
+<p>代码：</p>
 
 <pre><code>&lt;?php
-
-//初始化
-$pagetitle = '系统登陆';
-$loginerror = '';
-//功能部分
-if(isset($submit)){
-
-		//中间省略n行代码
-	} else {
-		//echo 1;
-		$loginerror = '用户名密码错误，请重新登陆.';
-		$templatefile = 'login.tpl.php';
-	}
-} else {
-	$templatefile = 'login.tpl.php';
-}
+$a='';
+$a = $_GET[&quot;a&quot;];
+$a = htmlspecialchars($a);
+echo $a;
 ?&gt;
-</code></pre>
+&lt;input type='text' value='&lt;?php echo $a?&gt;'&gt;
 
-<p>可以看出初始化了2个变量，然后包含了<code>login.tpl.php</code>。</p>
-
-<p>找到<code>login.tpl.php</code> 部分代码如下</p>
-
-<pre><code>?php 
-$pagetitle=&quot;管理登陆&quot;;
-?&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
-&lt;title&gt;
-&lt;?php if(!empty($topTitle)) echo $topTitle.'-';?&gt;
-&lt;?php echo $sys['indextitle']; ?&gt;-&lt;?php echo $pagetitle;?&gt;&lt;/title&gt;
-&lt;meta name=&quot;keywords&quot; content=&quot;&lt;?php echo $sys['webkeywords']; ?&gt;&quot;&gt;
-&lt;meta name=&quot;description&quot; content=&quot;&lt;?php echo $sys['webdescription']; ?&gt;&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/reset.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/invalid.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;	
-&lt;/head&gt;
-
-</code></pre>
-
-<p>可以看到标题里输出了3个变量，但是<code>$topTitle</code>并忘了初始化，它只检测了值非空，所以我们可以直接赋值执行脚本:
-<img src="https://i.loli.net/2017/09/11/59b69882a5b8b.png" alt="" /></p>
-
-<p>而其它页面倒是初始化了
-<img src="https://i.loli.net/2017/09/11/59b698f8ee057.png" alt="" />
-所以这就是一个程序员马虎大意的事.</p>
-
-<p>只要加一行代码就避免了</p>
-
-<pre><code>&lt;?php 
-$pagetitle=&quot;管理登陆&quot;;
-$topTitle = ''
-?&gt;
 </code></pre>
 
     </div>
@@ -186,7 +183,7 @@ $topTitle = ''
 
 <div class="container has-text-centered top-pad">
 <hr>
-<a href="http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/#top"><i class="fa fa-arrow-up"></i></a>
+<a href="http://jinse666.cn/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/#top"><i class="fa fa-arrow-up"></i></a>
 <hr>
 </div>
 
@@ -202,7 +199,7 @@ $topTitle = ''
 
 
 <script>
-$('a[href^="http:\/\/jinse666.cn\/blog\/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss\/#"]').click(function(e) {
+$('a[href^="http:\/\/jinse666.cn\/blog\/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3\/#"]').click(function(e) {
     e.preventDefault();
     var target = this.hash;
     $('html, body').animate({

@@ -54,5 +54,26 @@ PS:部分网页可能需要翻那啥，自行解决啦</description>
       <description>买的索尼耳机()是不带话筒的，但是现在的电脑大多数是耳机插口和话筒插口合一，所以插着耳机还想用自带话筒怎么办？ 直接上图吧. 在任务栏找到这个东西，找不到就是驱动没安装对或者地球要毁灭了。 点开后: 然后你就知道怎么办啦 </description>
     </item>
     
+    <item>
+      <title>HTML实体与相关函数了解</title>
+      <link>http://jinse666.cn/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://jinse666.cn/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</guid>
+      <description>#HTML实体是啥？
+在 HTML 中，某些字符是预留的。 在 HTML 中不能使用小于号（&amp;lt;）和大于号（&amp;gt;），这是因为浏览器会误认为它们是标签。使用是非常不安全的。 如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体 比如： &amp;lt;p&amp;gt; &amp;amp;#60;script&amp;amp;#62;alert(8848) &amp;amp;#60;/script&amp;amp;#62; &amp;lt;/p&amp;gt;
+显示出来的结果是这样：
+&amp;lt;script&amp;gt;alert(8848) &amp;lt;/script&amp;gt;
+如果我们xss的时候，输出被转换成HTML实体，那也就GG了。 在转换HTML实体的时候，php里会用 htmlspecialchars() 这个函数
+我们把代码改成 $a = htmlspecialchars($a); echo $a; 类似这样的就行了
+上面的做法虽然简单方便，但是忽略了 htmlspecialchars() 的一个重要参数
+如果单纯的用 htmlspecialchars()的话，它是不会转换单引号 &amp;lsquo; 的，这就造成可能的漏洞: 如果我们的代码是
+	$a = htmlspecialchars($a); &amp;lt;input type=&#39;text&#39; value=&#39;&amp;lt;?php echo $a?&amp;gt;&#39;&amp;gt;  $a 是 &#39; autofocus onfocus=&#39;alert(8848) 这样就用&#39;实现xss了
+3种方式： htmlspecialchars($a,ENT_COMPAT); 只转换双引号 htmlspecialchars($a, ENT_QUOTES); 转换双引号和单引号 htmlspecialchars($a, ENT_NOQUOTES); 不转换任何引号
+一般情况下用了 htmlspecialchars($a, ENT_QUOTES); 就没啥办法了，如果有师父知道其他方法的话欢迎指正！
+代码：
+&amp;lt;?php $a=&#39;&#39;; $a = $_GET[&amp;quot;a&amp;quot;]; $a = htmlspecialchars($a); echo $a; ?</description>
+    </item>
+    
   </channel>
 </rss>
