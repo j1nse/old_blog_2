@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Jinse</title>
-    <link>http://jinse666.cn/blog/</link>
+    <link>http://j1nse.xyz/blog/</link>
     <description>Recent content in Blogs on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 11 Sep 2017 21:39:09 +0000</lastBuildDate>
     
-	<atom:link href="http://jinse666.cn/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://j1nse.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>变量没有初始化造成xss</title>
-      <link>http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/</link>
+      <link>http://j1nse.xyz/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/</link>
       <pubDate>Mon, 11 Sep 2017 21:39:09 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/</guid>
+      <guid>http://j1nse.xyz/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/</guid>
       <description>初学php审计，先照猫画虎，拿最简单的练练手，要走的路还很长，向周神、鱼神学习。。 轻喷。。。
 &amp;lt;?php //初始化 $pagetitle = &#39;系统登陆&#39;; $loginerror = &#39;&#39;; //功能部分 if(isset($submit)){ //中间省略n行代码 } else { //echo 1; $loginerror = &#39;用户名密码错误，请重新登陆.&#39;; $templatefile = &#39;login.tpl.php&#39;; } } else { $templatefile = &#39;login.tpl.php&#39;; } ?&amp;gt;  可以看出初始化了2个变量，然后包含了login.tpl.php。
 找到login.tpl.php 部分代码如下
@@ -25,10 +25,10 @@
     
     <item>
       <title>Telegram介绍和使用以及在网上隐藏自己手机号</title>
-      <link>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</link>
+      <link>http://j1nse.xyz/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</link>
       <pubDate>Sun, 10 Sep 2017 21:34:27 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</guid>
+      <guid>http://j1nse.xyz/blog/telegram%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BD%91%E4%B8%8A%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E6%89%8B%E6%9C%BA%E5%8F%B7/</guid>
       <description> [TOC]
 Telegram介绍和使用以及在网上隐藏自己手机号 1. Telegram介绍和使用  Tg是毛子开发的即时通讯软件，使用需搭梯子翻qiang，加密良好，功能强大，界面美观。 没有各种敏感，各种屏蔽，畅所欲言。
 1.下载 Tg官网只提供谷歌play的连接，没有play的同志可以去apkpure搜索，如果你的手机是android 6以下的，可以去apkmirror下载最新版。 个人推荐下载软件顺序，xx应用市场最不纯净。 &amp;gt; 1. Google Play &amp;gt; 2. 官网 &amp;gt; 3. xx应用市场
@@ -40,20 +40,20 @@ Telegram介绍和使用以及在网上隐藏自己手机号 1. Telegram介绍和
     
     <item>
       <title>win下pip改源，速度起飞</title>
-      <link>http://jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</link>
+      <link>http://j1nse.xyz/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</link>
       <pubDate>Tue, 14 Mar 2017 21:22:42 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</guid>
+      <guid>http://j1nse.xyz/blog/win%E4%B8%8Bpip%E6%94%B9%E6%BA%90%E9%80%9F%E5%BA%A6%E8%B5%B7%E9%A3%9E/</guid>
       <description>新建到%USERPROFILE%\pip\pip.ini
 [global] index-url = https://pypi.douban.com/simple [install] trusted-host=pypi.doubanio.com  pip速度立马飞起</description>
     </item>
     
     <item>
       <title>掀垫子搞基大学物理实验选课指南</title>
-      <link>http://jinse666.cn/blog/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97/</link>
+      <link>http://j1nse.xyz/blog/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97/</link>
       <pubDate>Mon, 27 Feb 2017 20:12:28 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97/</guid>
+      <guid>http://j1nse.xyz/blog/%E6%8E%80%E5%9E%AB%E5%AD%90%E6%90%9E%E5%9F%BA%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C%E9%80%89%E8%AF%BE%E6%8C%87%E5%8D%97/</guid>
       <description>先引用一段大佬的话，侵删 &amp;gt;选物理实验一些必须要知道的东西。。。。
  必须先选绪论！一进去先选绪论！！！（不想翘课的话）
 一、物理实验三大天王：
@@ -93,20 +93,20 @@ Telegram介绍和使用以及在网上隐藏自己手机号 1. Telegram介绍和
     
     <item>
       <title>推荐DNS设置</title>
-      <link>http://jinse666.cn/blog/%E6%8E%A8%E8%8D%90dns%E8%AE%BE%E7%BD%AE/</link>
+      <link>http://j1nse.xyz/blog/%E6%8E%A8%E8%8D%90dns%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Fri, 17 Feb 2017 16:16:05 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/%E6%8E%A8%E8%8D%90dns%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>http://j1nse.xyz/blog/%E6%8E%A8%E8%8D%90dns%E8%AE%BE%E7%BD%AE/</guid>
       <description>有个大佬推荐用的DNS设置，个人感觉十分好用，为了保护隐私就不说大佬名字了 这里贴出DNS的设置：
  1.2.4.8 223.5.5.5 8.8.8.8  </description>
     </item>
     
     <item>
       <title>Python装Scrapy的曲折路途</title>
-      <link>http://jinse666.cn/blog/python%E8%A3%85scrapy%E7%9A%84%E6%9B%B2%E6%8A%98%E8%B7%AF%E9%80%94/</link>
+      <link>http://j1nse.xyz/blog/python%E8%A3%85scrapy%E7%9A%84%E6%9B%B2%E6%8A%98%E8%B7%AF%E9%80%94/</link>
       <pubDate>Fri, 10 Feb 2017 23:33:41 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/python%E8%A3%85scrapy%E7%9A%84%E6%9B%B2%E6%8A%98%E8%B7%AF%E9%80%94/</guid>
+      <guid>http://j1nse.xyz/blog/python%E8%A3%85scrapy%E7%9A%84%E6%9B%B2%E6%8A%98%E8%B7%AF%E9%80%94/</guid>
       <description>Scrapy这个模块比较神奇，感觉像装全家桶一样而且可能会遇到许多问题，我这里说一下解决方法。
  lxml安装有问题。   (一) 首先安装wheel命令行执行 pip install wheel (二) 下载相应版本的lxml后缀为.whl的文件 https://link.zhihu.com/?target=http%3A//www.lfd.uci.edu/%7Egohlke/pythonlibs/%23lxml (三)安装lxml进入lxml下载的根目录，按住shift然后鼠标右键选择在此处打开命令行窗口 pip install lxml_文件名.whl (四)检验安装成功与否任意处打开命令行窗口 python 回车 import lxml 如果没有报错就安装成功了！如果没成功请。。。。。。
 作者：杨航锋 链接：https://www.zhihu.com/question/49470061/answer/116163941 来源：知乎 &amp;gt;著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
@@ -117,19 +117,19 @@ PS:部分网页可能需要翻那啥，自行解决啦</description>
     
     <item>
       <title>如何戴耳机还使用电脑自带话筒</title>
-      <link>http://jinse666.cn/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</link>
+      <link>http://j1nse.xyz/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</link>
       <pubDate>Fri, 10 Feb 2017 10:17:29 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</guid>
+      <guid>http://j1nse.xyz/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</guid>
       <description>买的索尼耳机()是不带话筒的，但是现在的电脑大多数是耳机插口和话筒插口合一，所以插着耳机还想用自带话筒怎么办？ 直接上图吧. 在任务栏找到这个东西，找不到就是驱动没安装对或者地球要毁灭了。 点开后: 然后你就知道怎么办啦 </description>
     </item>
     
     <item>
       <title>HTML实体与相关函数了解</title>
-      <link>http://jinse666.cn/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</link>
+      <link>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://jinse666.cn/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</guid>
+      <guid>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</guid>
       <description>#HTML实体是啥？
 在 HTML 中，某些字符是预留的。 在 HTML 中不能使用小于号（&amp;lt;）和大于号（&amp;gt;），这是因为浏览器会误认为它们是标签。使用是非常不安全的。 如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体 比如： &amp;lt;p&amp;gt; &amp;amp;#60;script&amp;amp;#62;alert(8848) &amp;amp;#60;/script&amp;amp;#62; &amp;lt;/p&amp;gt;
 显示出来的结果是这样：
