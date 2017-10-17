@@ -6,10 +6,31 @@
     <description>Recent content in Blogs on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 11 Sep 2017 21:39:09 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 13:04:33 +0000</lastBuildDate>
     
 	<atom:link href="http://j1nse.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML实体与相关函数了解</title>
+      <link>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</link>
+      <pubDate>Sun, 15 Oct 2017 13:04:33 +0000</pubDate>
+      
+      <guid>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</guid>
+      <description>#HTML实体是啥？
+在 HTML 中，某些字符是预留的。 在 HTML 中不能使用小于号（&amp;lt;）和大于号（&amp;gt;），这是因为浏览器会误认为它们是标签。使用是非常不安全的。 如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体 比如： &amp;lt;p&amp;gt; &amp;amp;#60;script&amp;amp;#62;alert(8848) &amp;amp;#60;/script&amp;amp;#62; &amp;lt;/p&amp;gt;
+显示出来的结果是这样：
+&amp;lt;script&amp;gt;alert(8848) &amp;lt;/script&amp;gt;
+如果我们xss的时候，输出被转换成HTML实体，那也就GG了。 在转换HTML实体的时候，php里会用 htmlspecialchars() 这个函数
+我们把代码改成 $a = htmlspecialchars($a); echo $a; 类似这样的就行了
+上面的做法虽然简单方便，但是忽略了 htmlspecialchars() 的一个重要参数
+如果单纯的用 htmlspecialchars()的话，它是不会转换单引号 &amp;lsquo; 的，这就造成可能的漏洞: 如果我们的代码是
+	$a = htmlspecialchars($a); &amp;lt;input type=&#39;text&#39; value=&#39;&amp;lt;?php echo $a?&amp;gt;&#39;&amp;gt;  $a 是 &#39; autofocus onfocus=&#39;alert(8848) 这样就用&#39;实现xss了
+3种方式： htmlspecialchars($a,ENT_COMPAT); 只转换双引号 htmlspecialchars($a, ENT_QUOTES); 转换双引号和单引号 htmlspecialchars($a, ENT_NOQUOTES); 不转换任何引号
+一般情况下用了 htmlspecialchars($a, ENT_QUOTES); 就没啥办法了，如果有师父知道其他方法的话欢迎指正！
+代码：
+&amp;lt;?php $a=&#39;&#39;; $a = $_GET[&amp;quot;a&amp;quot;]; $a = htmlspecialchars($a); echo $a; ?</description>
+    </item>
     
     <item>
       <title>变量没有初始化造成xss</title>
@@ -125,24 +146,15 @@ PS:部分网页可能需要翻那啥，自行解决啦</description>
     </item>
     
     <item>
-      <title>HTML实体与相关函数了解</title>
-      <link>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</link>
+      <title></title>
+      <link>http://j1nse.xyz/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</guid>
-      <description>#HTML实体是啥？
-在 HTML 中，某些字符是预留的。 在 HTML 中不能使用小于号（&amp;lt;）和大于号（&amp;gt;），这是因为浏览器会误认为它们是标签。使用是非常不安全的。 如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体 比如： &amp;lt;p&amp;gt; &amp;amp;#60;script&amp;amp;#62;alert(8848) &amp;amp;#60;/script&amp;amp;#62; &amp;lt;/p&amp;gt;
-显示出来的结果是这样：
-&amp;lt;script&amp;gt;alert(8848) &amp;lt;/script&amp;gt;
-如果我们xss的时候，输出被转换成HTML实体，那也就GG了。 在转换HTML实体的时候，php里会用 htmlspecialchars() 这个函数
-我们把代码改成 $a = htmlspecialchars($a); echo $a; 类似这样的就行了
-上面的做法虽然简单方便，但是忽略了 htmlspecialchars() 的一个重要参数
-如果单纯的用 htmlspecialchars()的话，它是不会转换单引号 &amp;lsquo; 的，这就造成可能的漏洞: 如果我们的代码是
-	$a = htmlspecialchars($a); &amp;lt;input type=&#39;text&#39; value=&#39;&amp;lt;?php echo $a?&amp;gt;&#39;&amp;gt;  $a 是 &#39; autofocus onfocus=&#39;alert(8848) 这样就用&#39;实现xss了
-3种方式： htmlspecialchars($a,ENT_COMPAT); 只转换双引号 htmlspecialchars($a, ENT_QUOTES); 转换双引号和单引号 htmlspecialchars($a, ENT_NOQUOTES); 不转换任何引号
-一般情况下用了 htmlspecialchars($a, ENT_QUOTES); 就没啥办法了，如果有师父知道其他方法的话欢迎指正！
-代码：
-&amp;lt;?php $a=&#39;&#39;; $a = $_GET[&amp;quot;a&amp;quot;]; $a = htmlspecialchars($a); echo $a; ?</description>
+      <guid>http://j1nse.xyz/blog/</guid>
+      <description>title: 动手学习CSRF date: 2017-10-17 20:19:49 categories: 经验 tags: Σ(っ°Д°;)っ
+自己写了个简陋的CSRF的样例，简单易懂，帮助理解CSRF
+这是服务端，模仿管理员添加管理账户(烂代码没有管sql注入啥的)
+&amp;lt;?php header(&amp;quot;Content-Type:text/html;charset=utf-8&amp;quot;); if( !isset($_COOKIE[&amp;quot;admin&amp;quot;]) )setcookie(&amp;quot;admin&amp;quot;, &amp;quot;2&amp;quot;); if( isset($_POST[&#39;sub&#39;]) &amp;amp;&amp;amp; isset($_COOKIE[&amp;quot;admin&amp;quot;]) ) { if ($_COOKIE[&amp;quot;admin&amp;quot;]!=&#39;1&#39;) { echo &amp;quot;你不是女装管理，没有权利操作&amp;quot;; return 0; } $username = $_POST[&#39;username&#39;]; $password = $_POST[&#39;password&#39;]; $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);//连接mysql mysqli_query($conn,&amp;quot;CREATE DATABASE test&amp;quot;);//建立数据库 $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;,&amp;quot;test&amp;quot;);//连接数据库 mysqli_query($conn,&amp;quot;CREATE TABLE adminsql (id int ,username char(10),password char(10))&amp;quot;);//建表 $query = mysqli_query($conn,&amp;quot;SET NAMES &#39;gbk&#39;&amp;quot;); $sql=&amp;quot;INSERT INTO `adminsql` (`id` ,`username` ,`password`)VALUES (13 , &#39;$username&#39; , &#39;$password&#39;)&amp;quot;; $row=mysqli_query($conn,$sql); //执行sql插入语句	$sql=&amp;quot;SELECT * FROM adminsql&amp;quot;; if($row=mysqli_query($conn,$sql)) { while($rows = mysqli_fetch_array($row)) { echo &amp;quot;user:{$rows[&#39;username&#39;]}-----pass:{$rows[&#39;password&#39;]}&amp;quot;.</description>
     </item>
     
   </channel>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</loc>
+    <lastmod>2017-10-15T13:04:33+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://j1nse.xyz/blog/%E5%8F%98%E9%87%8F%E6%B2%A1%E6%9C%89%E5%88%9D%E5%A7%8B%E5%8C%96%E9%80%A0%E6%88%90xss/</loc>
     <lastmod>2017-09-11T21:39:09+00:00</lastmod>
   </url>
@@ -49,7 +54,11 @@
   
   <url>
     <loc>http://j1nse.xyz/blog/</loc>
-    <lastmod>2017-09-11T21:39:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://j1nse.xyz/blog/</loc>
+    <lastmod>2017-10-15T13:04:33+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -59,12 +68,8 @@
   </url>
   
   <url>
-    <loc>http://j1nse.xyz/blog/html%E5%AE%9E%E4%BD%93%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BA%86%E8%A7%A3/</loc>
-  </url>
-  
-  <url>
     <loc>http://j1nse.xyz/</loc>
-    <lastmod>2017-09-11T21:39:09+00:00</lastmod>
+    <lastmod>2017-10-15T13:04:33+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -99,7 +104,7 @@
   
   <url>
     <loc>http://j1nse.xyz/categories/%E7%BB%8F%E9%AA%8C/</loc>
-    <lastmod>2017-03-14T21:22:42+00:00</lastmod>
+    <lastmod>2017-10-15T13:04:33+00:00</lastmod>
     <priority>0</priority>
   </url>
   
