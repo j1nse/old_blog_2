@@ -6,10 +6,21 @@
     <description>Recent content in Σっдっ on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 17 Feb 2017 16:16:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Oct 2017 20:19:49 +0000</lastBuildDate>
     
 	<atom:link href="http://j1nse.xyz/tags/%CF%83%E3%81%A3%D0%B4%E3%81%A3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>动手学习CSRF</title>
+      <link>http://j1nse.xyz/blog/%E5%8A%A8%E6%89%8B%E5%AD%A6%E4%B9%A0csrf/</link>
+      <pubDate>Tue, 17 Oct 2017 20:19:49 +0000</pubDate>
+      
+      <guid>http://j1nse.xyz/blog/%E5%8A%A8%E6%89%8B%E5%AD%A6%E4%B9%A0csrf/</guid>
+      <description>自己写了个简陋的CSRF的样例，简单易懂，帮助理解CSRF
+这是服务端，模仿管理员添加管理账户(烂代码没有管sql注入啥的)
+&amp;lt;?php header(&amp;quot;Content-Type:text/html;charset=utf-8&amp;quot;); if( !isset($_COOKIE[&amp;quot;admin&amp;quot;]) )setcookie(&amp;quot;admin&amp;quot;, &amp;quot;2&amp;quot;); if( isset($_POST[&#39;sub&#39;]) &amp;amp;&amp;amp; isset($_COOKIE[&amp;quot;admin&amp;quot;]) ) { if ($_COOKIE[&amp;quot;admin&amp;quot;]!=&#39;1&#39;) { echo &amp;quot;你不是女装管理，没有权利操作&amp;quot;; return 0; } $username = $_POST[&#39;username&#39;]; $password = $_POST[&#39;password&#39;]; $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);//连接mysql mysqli_query($conn,&amp;quot;CREATE DATABASE test&amp;quot;);//建立数据库 $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;,&amp;quot;test&amp;quot;);//连接数据库 mysqli_query($conn,&amp;quot;CREATE TABLE adminsql (id int ,username char(10),password char(10))&amp;quot;);//建表 $query = mysqli_query($conn,&amp;quot;SET NAMES &#39;gbk&#39;&amp;quot;); $sql=&amp;quot;INSERT INTO `adminsql` (`id` ,`username` ,`password`)VALUES (13 , &#39;$username&#39; , &#39;$password&#39;)&amp;quot;; $row=mysqli_query($conn,$sql); //执行sql插入语句	$sql=&amp;quot;SELECT * FROM adminsql&amp;quot;; if($row=mysqli_query($conn,$sql)) { while($rows = mysqli_fetch_array($row)) { echo &amp;quot;user:{$rows[&#39;username&#39;]}-----pass:{$rows[&#39;password&#39;]}&amp;quot;.</description>
+    </item>
     
     <item>
       <title>推荐DNS设置</title>

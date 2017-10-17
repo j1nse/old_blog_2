@@ -6,10 +6,21 @@
     <description>Recent content in Blogs on Jinse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Oct 2017 13:04:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Oct 2017 20:19:49 +0000</lastBuildDate>
     
 	<atom:link href="http://j1nse.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>动手学习CSRF</title>
+      <link>http://j1nse.xyz/blog/%E5%8A%A8%E6%89%8B%E5%AD%A6%E4%B9%A0csrf/</link>
+      <pubDate>Tue, 17 Oct 2017 20:19:49 +0000</pubDate>
+      
+      <guid>http://j1nse.xyz/blog/%E5%8A%A8%E6%89%8B%E5%AD%A6%E4%B9%A0csrf/</guid>
+      <description>自己写了个简陋的CSRF的样例，简单易懂，帮助理解CSRF
+这是服务端，模仿管理员添加管理账户(烂代码没有管sql注入啥的)
+&amp;lt;?php header(&amp;quot;Content-Type:text/html;charset=utf-8&amp;quot;); if( !isset($_COOKIE[&amp;quot;admin&amp;quot;]) )setcookie(&amp;quot;admin&amp;quot;, &amp;quot;2&amp;quot;); if( isset($_POST[&#39;sub&#39;]) &amp;amp;&amp;amp; isset($_COOKIE[&amp;quot;admin&amp;quot;]) ) { if ($_COOKIE[&amp;quot;admin&amp;quot;]!=&#39;1&#39;) { echo &amp;quot;你不是女装管理，没有权利操作&amp;quot;; return 0; } $username = $_POST[&#39;username&#39;]; $password = $_POST[&#39;password&#39;]; $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);//连接mysql mysqli_query($conn,&amp;quot;CREATE DATABASE test&amp;quot;);//建立数据库 $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;,&amp;quot;test&amp;quot;);//连接数据库 mysqli_query($conn,&amp;quot;CREATE TABLE adminsql (id int ,username char(10),password char(10))&amp;quot;);//建表 $query = mysqli_query($conn,&amp;quot;SET NAMES &#39;gbk&#39;&amp;quot;); $sql=&amp;quot;INSERT INTO `adminsql` (`id` ,`username` ,`password`)VALUES (13 , &#39;$username&#39; , &#39;$password&#39;)&amp;quot;; $row=mysqli_query($conn,$sql); //执行sql插入语句	$sql=&amp;quot;SELECT * FROM adminsql&amp;quot;; if($row=mysqli_query($conn,$sql)) { while($rows = mysqli_fetch_array($row)) { echo &amp;quot;user:{$rows[&#39;username&#39;]}-----pass:{$rows[&#39;password&#39;]}&amp;quot;.</description>
+    </item>
     
     <item>
       <title>HTML实体与相关函数了解</title>
@@ -143,18 +154,6 @@ PS:部分网页可能需要翻那啥，自行解决啦</description>
       
       <guid>http://j1nse.xyz/blog/%E5%A6%82%E4%BD%95%E6%88%B4%E8%80%B3%E6%9C%BA%E8%BF%98%E4%BD%BF%E7%94%A8%E7%94%B5%E8%84%91%E8%87%AA%E5%B8%A6%E8%AF%9D%E7%AD%92/</guid>
       <description>买的索尼耳机()是不带话筒的，但是现在的电脑大多数是耳机插口和话筒插口合一，所以插着耳机还想用自带话筒怎么办？ 直接上图吧. 在任务栏找到这个东西，找不到就是驱动没安装对或者地球要毁灭了。 点开后: 然后你就知道怎么办啦 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://j1nse.xyz/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://j1nse.xyz/blog/</guid>
-      <description>title: 动手学习CSRF date: 2017-10-17 20:19:49 categories: 经验 tags: Σ(っ°Д°;)っ
-自己写了个简陋的CSRF的样例，简单易懂，帮助理解CSRF
-这是服务端，模仿管理员添加管理账户(烂代码没有管sql注入啥的)
-&amp;lt;?php header(&amp;quot;Content-Type:text/html;charset=utf-8&amp;quot;); if( !isset($_COOKIE[&amp;quot;admin&amp;quot;]) )setcookie(&amp;quot;admin&amp;quot;, &amp;quot;2&amp;quot;); if( isset($_POST[&#39;sub&#39;]) &amp;amp;&amp;amp; isset($_COOKIE[&amp;quot;admin&amp;quot;]) ) { if ($_COOKIE[&amp;quot;admin&amp;quot;]!=&#39;1&#39;) { echo &amp;quot;你不是女装管理，没有权利操作&amp;quot;; return 0; } $username = $_POST[&#39;username&#39;]; $password = $_POST[&#39;password&#39;]; $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;);//连接mysql mysqli_query($conn,&amp;quot;CREATE DATABASE test&amp;quot;);//建立数据库 $conn = mysqli_connect(&amp;quot;localhost&amp;quot;	,&amp;quot;root&amp;quot;,&amp;quot;root&amp;quot;,&amp;quot;test&amp;quot;);//连接数据库 mysqli_query($conn,&amp;quot;CREATE TABLE adminsql (id int ,username char(10),password char(10))&amp;quot;);//建表 $query = mysqli_query($conn,&amp;quot;SET NAMES &#39;gbk&#39;&amp;quot;); $sql=&amp;quot;INSERT INTO `adminsql` (`id` ,`username` ,`password`)VALUES (13 , &#39;$username&#39; , &#39;$password&#39;)&amp;quot;; $row=mysqli_query($conn,$sql); //执行sql插入语句	$sql=&amp;quot;SELECT * FROM adminsql&amp;quot;; if($row=mysqli_query($conn,$sql)) { while($rows = mysqli_fetch_array($row)) { echo &amp;quot;user:{$rows[&#39;username&#39;]}-----pass:{$rows[&#39;password&#39;]}&amp;quot;.</description>
     </item>
     
   </channel>
