@@ -18,9 +18,11 @@
       
       <guid>http://j1nse.xyz/blog/typecho%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0/</guid>
       <description>最近爆出来一个typecho的前台getshell的漏洞。师傅在bc里发了后，自己实践了一下，本地复现成功，而且确实有很多站中招。
- 这是师傅们的文章 &amp;gt;typecho “后门”分析 Typecho 前台 getshell 漏洞分析 Typecho install.php 反序列化导致任意代码执行  因为自己太菜了，为了理解其中的原理，费了很多时间(还是没理解好)
+ 这是师傅们的文章 &amp;gt;typecho “后门”分析
+Typecho 前台 getshell 漏洞分析
+Typecho install.php 反序列化导致任意代码执行  因为自己太菜了，为了理解其中的原理，费了很多时间(还是没理解好)
 具体操作师傅们的文章里写的很好了。 这是个POP链利用(也有师傅说ROP链)，POP链应该就是 &amp;gt; POP 链的构造则是寻找程序当前环境中已经定义了或者能够动态加载的对象中的属性（函数方法），将一些可能的调用组合在一起形成一个完整的、具有目的性的操作.
-我自己的理解就是，在根目录的install文件里很容易就能绕过判断
+我自己的理解就是，在根目录的install.php文件里很容易就能绕过判断
 //判断是否已经安装 if (!isset($_GET[&#39;finish&#39;]) &amp;amp;&amp;amp; file_exists(__TYPECHO_ROOT_DIR__ . &#39;/config.inc.php&#39;) &amp;amp;&amp;amp; empty($_SESSION[&#39;typecho&#39;])) { exit; } // 挡掉可能的跨站请求 if (!empty($_GET) || !empty($_POST)) { if (empty($_SERVER[&#39;HTTP_REFERER&#39;])) { exit; } $parts = parse_url($_SERVER[&#39;HTTP_REFERER&#39;]); if (!empty($parts[&#39;port&#39;])) { $parts[&#39;host&#39;] = &amp;quot;{$parts[&#39;host&#39;]}:{$parts[&#39;port&#39;]}&amp;quot;; } if (empty($parts[&#39;host&#39;]) || $_SERVER[&#39;HTTP_HOST&#39;] != $parts[&#39;host&#39;]) { exit; } }   只要传入GET参数finish，并设置referer为站内url即可。
  然后这个是一个反序列化漏洞，用户可以通过cookie传一些东西进去
 ?php else : ?</description>
