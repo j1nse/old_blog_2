@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://j1nse.xyz/blog/typecho%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2017-10-29T00:04:49+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://j1nse.xyz/blog/%E5%8A%A8%E6%89%8B%E5%AD%A6%E4%B9%A0csrf/</loc>
     <lastmod>2017-10-17T20:19:49+00:00</lastmod>
   </url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>http://j1nse.xyz/blog/</loc>
-    <lastmod>2017-10-17T20:19:49+00:00</lastmod>
+    <lastmod>2017-10-29T00:04:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +75,7 @@
   
   <url>
     <loc>http://j1nse.xyz/</loc>
-    <lastmod>2017-10-17T20:19:49+00:00</lastmod>
+    <lastmod>2017-10-29T00:04:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,7 +92,7 @@
   
   <url>
     <loc>http://j1nse.xyz/tags/%CF%83%E3%81%A3%D0%B4%E3%81%A3/</loc>
-    <lastmod>2017-10-17T20:19:49+00:00</lastmod>
+    <lastmod>2017-10-29T00:04:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -105,7 +110,7 @@
   
   <url>
     <loc>http://j1nse.xyz/categories/%E7%BB%8F%E9%AA%8C/</loc>
-    <lastmod>2017-10-17T20:19:49+00:00</lastmod>
+    <lastmod>2017-10-29T00:04:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   
